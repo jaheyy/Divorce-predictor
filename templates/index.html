@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Deployment Tutorial 1</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+    <div id="survey">
+        <h1>Divorce chance survey</h1>
+        <h2>Please fill below to find out your chances for having a divorce.</h2>
+          <form action="{{ url_for('predict')}}" method="post">
+            {%for i in range(len)%}
+              <p>{{ questions[i] }}</p>
+              <label><input class="radioInput" type="radio" name="q{{ i }}" value="0" required>0</label>
+              <label><input class="radioInput" type="radio" name="q{{ i }}" value="1" required>1</label>
+              <label><input class="radioInput" type="radio" name="q{{ i }}" value="2" required>2</label>
+              <label><input class="radioInput" type="radio" name="q{{ i }}" value="3" required>3</label>
+              <label><input class="radioInput" type="radio" name="q{{ i }}" value="4" required>4</label>
+            {%endfor%}
+              <br>
+              <button type="submit">Submit</button>
+          </form>
+    </div>
+</body>
+</html>
