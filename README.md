@@ -1,4 +1,5 @@
 # Divorce-predictor
+Machine learning classifaction model made with sklearn, deployed as survey with Flask. 
 ### Dataset
 
 [Link to data](https://archive.ics.uci.edu/ml/datasets/Divorce+Predictors+data+set)
